@@ -1,5 +1,10 @@
 <template>
     <div class="container mt-4">
+      <div class="text-end">
+        <button type="button" class="btn btn-sm btn-outline-danger d-flex align-items-center gap-1" @click="$emit('cerrar')">
+          <span aria-hidden="true">&times;</span> Cerrar
+        </button>
+      </div>
       <h2 class="mb-3">{{ esEdicion ? 'Editar Transacción' : 'Agregar Transacción' }}</h2>
       <form @submit.prevent="guardarTransaccion">
         <div class="mb-3">
